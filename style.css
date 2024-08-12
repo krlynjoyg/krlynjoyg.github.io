@@ -353,6 +353,8 @@ nav ul li a:hover {
 }
 
 footer {
+    left: 0;
+    right: 0;
     text-align: center;
     margin-top: 50px;
     padding: 20px 0;
