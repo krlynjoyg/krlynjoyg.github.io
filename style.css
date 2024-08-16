@@ -264,19 +264,23 @@ nav ul li a:hover {
     }
 }
 
+/* Updated Projects Section */
 .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
+    display: flex;
+    flex-wrap: wrap; /* Ensures the items wrap on smaller screens */
+    justify-content: space-between;
+    gap: 20px; /* Adjust gap between items */
     margin-top: 40px;
 }
 
 .project-item {
+    flex: 1 1 calc(50% - 40px); /* Two items per row on medium screens */
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     transition: transform 0.3s ease;
+    margin-bottom: 20px; /* Add some space at the bottom */
 }
 
 .project-item:hover {
@@ -348,3 +352,16 @@ footer a:hover {
     text-decoration: none;
     color: #d4c2a8;
 }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .project-item {
+        flex: 1 1 calc(100% - 40px); /* Single item per row on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .project-item {
+        flex: 1 1 calc
+    }
+}      
