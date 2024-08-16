@@ -25,7 +25,7 @@ nav ul {
 }
 
 nav ul li {
-    display: inline;
+    display: inline-block;
     margin: 0 15px;
 }
 
@@ -44,11 +44,11 @@ nav ul li a:hover {
 .container {
     text-align: center;
     margin: 100px auto 50px auto;
-    max-width: 1200px; /* Changed from 800px to 1200px */
+    max-width: 1200px; /* Adjusted max width */
     background-color: white;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .header {
@@ -57,14 +57,15 @@ nav ul li a:hover {
 }
 
 .profile-img {
-    width: 250px;
-    height: 250px;
+    width: 100%;
+    max-width: 250px;
+    height: auto;
     border-radius: 50%;
     object-fit: cover;
 }
 
 .content h1 {
-    font-size: 36px;
+    font-size: 2.5rem;
     margin-top: 20px;
 }
 
@@ -73,19 +74,19 @@ nav ul li a:hover {
 }
 
 .content p {
-    font-size: 14px;
+    font-size: 1rem;
     margin: 20px 0;
 }
+
 .section {
     text-align: center;
     margin: 50px auto;
-    max-width: 1200px; /* Changed from 800px to 1200px */
+    max-width: 1200px; /* Adjusted max width */
     background-color: white;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-
 
 .about-content {
     display: flex;
@@ -96,35 +97,35 @@ nav ul li a:hover {
     background-image: url('fav-bg.jpg');
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap; /* Ensure wrapping for mobile */
 }
 
-
-
 .about-img {
-    width: 100%; /* Adjust this value to make the image larger */
-    height: auto;
-    display: block;
-    margin: 0 auto;
+    flex: 1;
+    text-align: center;
 }
 
 .about-img img {
-    max-width: 100%;
+    width: 100%;
+    max-width: 80%;
+    height: auto;
     border-radius: 10px;
 }
 
 .about-text {
-    flex: 0; /* Optional: You can decrease this value to give more space to the image */
+    flex: 2;
+    padding-left: 20px;
     text-align: left;
 }
 
 .about-text h2 {
-    font-size: 28px;
+    font-size: 2rem;
     margin-bottom: 15px;
     color: #333;
 }
 
 .about-text p {
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 1.6;
     margin-bottom: 10px;
     color: #555;
@@ -132,19 +133,21 @@ nav ul li a:hover {
 
 .personality-traits {
     display: flex;
+    flex-wrap: wrap; /* Ensure traits wrap on smaller screens */
     justify-content: space-between;
     margin-top: 20px;
 }
 
 .trait {
     text-align: left;
-    font-size: 18px;
+    font-size: 1.125rem;
     color: #ff6600;
     flex: 1;
+    margin-bottom: 20px;
 }
 
 .trait span {
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: bold;
 }
 
@@ -162,7 +165,7 @@ nav ul li a:hover {
     transition: background-color 0.3s;
 }
 
-.contact-btn:hover, .portfolio-btn:hover {
+.contact-btn:hover, .projects-btn:hover {
     background-color: #ff5500;
 }
 
@@ -196,19 +199,19 @@ nav ul li a:hover {
 }
 
 .favorite-item h3 {
-    font-size: 20px;
+    font-size: 1.25rem;
     margin-bottom: 10px;
     margin-left: 40px; /* Space for the icon */
 }
 
 .favorite-item p {
-    font-size: 14px;
+    font-size: 0.875rem;
     line-height: 1.6;
     margin-left: 40px; /* Space for the icon */
 }
 
 .favorite-icon {
-    font-size: 30px;
+    font-size: 1.875rem;
     color: #333;
     position: absolute;
     top: 20px;
@@ -220,25 +223,36 @@ nav ul li a:hover {
     .favorite-item {
         width: calc(50% - 40px); /* Two items per row */
     }
+
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-text {
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .about-img img {
+        max-width: 100%;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr; /* One column on smaller screens */
+    }
 }
 
 @media (max-width: 480px) {
     .favorite-item {
         width: calc(100% - 40px); /* One item per row */
     }
-}
 
-/* School Projects Section */
-
-.about-favorites {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-image: url('fav-bg.jpg');
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    .container, .section {
+        margin: 150px auto 50px auto;
+        padding: 20px;
+        max-width: 100%;
+    }
 }
 
 .projects-grid {
@@ -307,39 +321,7 @@ nav ul li a:hover {
     background-color: #ff5500;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .projects-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-.about-content {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.about-text {
-    flex: 2;
-    padding-left: 20px;
-    text-align: left; /* Align text to the left */
-}
-
-.about-img {
-    flex: 1;
-    text-align: left;
-}
-
-.about-img img {
-    max-width: 80%; /* Make the image smaller */
-    border-radius: 10px;
-}
-
 footer {
-    left: 0;
-    right: 0;
     text-align: center;
     margin-top: 50px;
     padding: 20px 0;
@@ -356,26 +338,4 @@ footer a {
 footer a:hover {
     text-decoration: none;
     color: #d4c2a8;
-}
-
-/* Media Queries for Responsiveness */
-@media (max-width: 768px) {
-    .container, .section {
-        margin: 170px auto 70px auto;
-        padding: 100px;
-        max-width: 90%; /* Adjusted for smaller screens */
-    }
-
-    .about-content {
-        flex-direction: column;
-    }
-
-    .about-text {
-        padding-left: 0;
-        text-align: center;
-    }
-
-    .about-img img {
-        max-width: 100%;
-    }
 }
