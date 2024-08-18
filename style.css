@@ -1,367 +1,209 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-image: url('background.png');
-    color: #333;
-    scroll-behavior: smooth;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krislyn Joy E. Guitguitin</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#favorites">Favorites</a></li>
+                <li><a href="#projects">School Projects</a></li>
+                <li><a href="#talents">Talents</a></li>
+            </ul>
+        </nav>
+        <div class="header" id="home">
+            <img src="me.jpg" alt="Krislyn Joy E. Guitguitin's Profile Picture" class="profile-img">
+        </div>
+        <div class="content">
+            <h1>Krislyn Joy E. Guitguitin</h1>
+            <h1>BSIT-2A</h1>
+            <hr>
+            <br>
+        </div>
+    </div>
 
-nav {
-    background-color: #333;
-    padding: 10px 0;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-}
+    <div class="section" id="about">
+        <div class="about-content">
+            <div class="about-img">
+                <img src="me.png" alt="Krislyn Joy E. Guitguitin">
+            </div>
+            <div class="about-text">
+                <h2>About Me</h2>
+                <hr>
+                <br>
+                <p>I'm Krislyn Joy E. Guitguitin, a second-year Information Technology student at the University of the Immaculate Conception.</p>
+                <p>I love playing instruments such as guitar, bass, piano, and drums. My sports are badminton and volleyball. I’m currently learning new languages such as Korean (Hangul) and Japanese (Hiragana). Also, I love music and singing.</p>
+                <div class="personality-traits">
+                    <div class="trait">
+                        <span>100%</span>
+                        <p>Compassionate</p>
+                    </div>
+                    <div class="trait">
+                        <span>100%</span>
+                        <p>Ambivert</p>
+                    </div>
+                </div>
+                <div class="buttons">
+                    <a href="#contact" class="contact-btn">CONTACT ME</a>
+                    <a href="#projects" class="projects-btn">PROJECTS</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
 
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-}
+    <div class="section" id="favorites">
+        <div class="about-favorites">
+            <h2>My Favorites</h2>
+            <hr>
+            <br>
+            <div class="favorites-grid">
+                <div class="favorite-item">
+                    <i class="fas fa-camera-retro favorite-icon"></i>
+                    <h3>Photography</h3>
+                    <p>I love taking pictures because it allows me to capture moments, emotions, and the beauty of the world in a way that can be shared and preserved.</p>
+                </div>
+                <div class="favorite-item">
+                    <i class="fas fa-music favorite-icon"></i>
+                    <h3>Listening to Music</h3>
+                    <p>I enjoy listening to music because it makes my mind relax and it makes me feel better.</p>
+                </div>
+                <div class="favorite-item">
+                    <i class="fas fa-book-open favorite-icon"></i>
+                    <h3>Narnia</h3>
+                    <p>I love the Chronicles of Narnia because it reminds me of my childhood, which I love. It continues to inspire and enchant me, no matter how many times I revisit them.</p>
+                </div>
+                <div class="favorite-item">
+                    <i class="fas fa-table-tennis favorite-icon"></i>
+                    <h3>Badminton</h3>
+                    <p>I like the sport badminton because it is a sport that improves my reaction time and mobility, which is really relevant to the game.</p>
+                </div>
+                <div class="favorite-item">
+                    <i class="fas fa-guitar favorite-icon"></i>
+                    <h3>Playing Guitar</h3>
+                    <p>I've been playing guitar since I was 7 years old, and over the years, it has become a way for me to express myself, and I love the feeling of getting lost in the music when I'm strumming chords.</p>
+                </div>
+                <div class="favorite-item">
+                    <i class="fas fa-ice-cream favorite-icon"></i>
+                    <h3>Ice Cream</h3>
+                    <p>Ice cream is my comfort food. Whenever I feel stressed or need a pick-me-up, a scoop of my favorite flavor never fails to lift my spirits.</p>
+                </div>
+            </div>
+        </div>
+        
 
-nav ul li {
-    display: inline-block;
-    margin: 0 15px;
-}
+    <div class="section" id="projects">
+        <div class="about-favorites">
+        <h2>School Projects</h2>
+        <hr>
+        <br>
+    <div class="projects-grid">
+        <!-- First Project -->
+        <div class="project-item">
+            <img src="portfolio-1.jpg" alt="Tap&Sign" class="project-img">
+            <div class="project-info">
+                <span class="project-category">FIGMA DESIGN</span>
+                <h3>Tap&Sign (Where touch and gesture redefine communication)</h3>
+                <p>We designed an application last semester called "Tap&Sign".</p>
+                <a href="https://tinyurl.com/m5dj9vvj" target="_blank" class="view-project">VIEW PROJECT</a>
+            </div>
+        </div>
+        <!-- Second Project -->
+        <div class="project-item">
+            <img src="portfolio-2.jpg" alt="UIC School Hymn Video" class="project-img">
+            <div class="project-info">
+                <span class="project-category">UIC SCHOOL HYMN</span>
+                <h3>UIC School Hymn Video (CCS)</h3>
+                <p>Bringing tradition to life through music and unity. 🌟Proudly presenting our UIC School Hymn, a heartfelt collaboration with the CCS department.</p>
+            </div>
+        </div>
+        <!-- Third Project -->
+        <div class="project-item">
+            <img src="portfolio-3.jpg" alt="ICTDU Booking Reservation" class="project-img">
+            <div class="project-info">
+                <span class="project-category">ICTDU SYSTEM</span>
+                <h3>ICTDU Booking Reservation</h3>
+                <p>We created a system of the ICTDU Booking Reservation - system go-to solution for easy and efficient reservations.</p>
+            </div>
+        </div>
+        <!-- Fourth Project -->
+        <div class="project-item">
+            <img src="portfolio-4.jpg" alt="Art Appreciation Project" class="project-img">
+            <div class="project-info">
+                <span class="project-category">ART APPRECIATION</span>
+                <h3>Christmas Song Parody</h3>
+                <p>Our project in Art Appreciation last semester was a Christmas song parody. We changed the lyrics of "Here Comes Santa Claus," "Cupid," "Rudolph the Red-Nosed Reindeer," "Jingle Bell Rock," and "All I Want for Christmas Is You," and we mashed up the songs.</p>
+                <a href="https://tinyurl.com/5hycj6nu" target="_blank" class="view-project">VIEW PROJECT</a>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<div class="section" id="talents">
+    <div class="about-favorites">
+    <h2>Talents</h2>
+    <hr>
+    <br>
+<div class="projects-grid">
+    <!-- First Talent -->
+    <div class="project-item">
+        <img src="talent-1.jpg" alt="guitar" class="project-img">
+        <div class="project-info">
+            <span class="project-category">GUITAR</span>
+            <h3>Playing guitar</h3>
+            <a href="#" class="view-project">VIEW IMAGE</a>
+        </div>
+    </div>
+    <!-- Second Talent -->
+    <div class="project-item">
+        <img src="talent-2.jpg" alt="bass" class="project-img">
+        <div class="project-info">
+            <span class="project-category">BASS</span>
+            <h3>Playing bass</h3>
+            <a href="#" class="view-project">VIEW IMAGE</a>
+        </div>
+    </div>
+    <div class="project-item">
+        <img src="talent-3.png" alt="piano" class="project-img">
+        <div class="project-info">
+            <span class="project-category">PIANO</span>
+            <h3>Playing piano</h3>
+            <a href="#" class="view-project">VIEW IMAGE</a>
+        </div>
+    </div>
+    <div class="project-item">
+        <img src="talent-4.jpg" alt="singing" class="project-img">
+        <div class="project-info">
+            <span class="project-category">SINGING</span>
+            <h3>I love to sing</h3>
+            <a href="#" class="view-project">VIEW IMAGE</a>
+        </div>
+    </div>
 
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-    transition: color 0.3s, text-decoration 0.3s;
-}
-
-nav ul li a:hover {
-    text-decoration: underline;
-    color: #d4c2a8;
-}
-
-.container {
-    text-align: center;
-    margin: 100px auto 50px auto;
-    max-width: 1200px;
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.header {
-    background-color: #d4c2a8;
-    padding: 50px 0;
-}
-
-.profile-img {
-    width: 100%;
-    max-width: 250px;
-    height: auto;
-    border-radius: 50%;
-    object-fit: cover;
-}
-
-.content h1 {
-    font-size: 2.5rem;
-    margin-top: 20px;
-}
-
-.content .highlight {
-    color: #000;
-}
-
-.content p {
-    font-size: 1rem;
-    margin: 20px 0;
-}
-
-.section {
-    text-align: center;
-    margin: 50px auto;
-    max-width: 1200px;
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.about-content {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-image: url('fav-bg.jpg');
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    flex-wrap: wrap;
-}
-
-.about-img {
-    flex: 1;
-    text-align: center;
-}
-
-.about-img img {
-    width: 100%;
-    max-width: 80%;
-    height: auto;
-    border-radius: 10px;
-}
-
-.about-text {
-    flex: 2;
-    padding-left: 20px;
-    text-align: left;
-}
-
-.about-text h2 {
-    font-size: 2rem;
-    margin-bottom: 15px;
-    color: #333;
-}
-
-.about-text p {
-    font-size: 1rem;
-    line-height: 1.6;
-    margin-bottom: 10px;
-    color: #555;
-}
-
-.personality-traits {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-top: 20px;
-}
-
-.trait {
-    text-align: left;
-    font-size: 1.125rem;
-    color: #ff6600;
-    flex: 1;
-    margin-bottom: 20px;
-}
-
-.trait span {
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-.buttons {
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px; /* Space between buttons */
-}
-
-.contact-btn, .projects-btn {
-    width: 80%; /* Ensures buttons fit well on mobile */
-    text-align: center;
-    text-decoration: none;
-    color: white;
-    background-color: #ff6600;
-    padding: 10px 20px;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-.contact-btn:hover, .projects-btn:hover {
-    background-color: #ff5500;
-}
-
-.about-favorites {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-image: url('fav-bg.jpg');
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-} 
-
-.favorites-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 20px;
-}
-
-.favorite-item {
-    background-image: url('fav-bg.jpg');
-    padding: 20px;
-    width: calc(33.333% - 40px);
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    text-align: left;
-    position: relative;
-}
-
-.favorite-item h3 {
-    font-size: 1.25rem;
-    margin-bottom: 10px;
-    margin-left: 40px;
-}
-
-.favorite-item p {
-    font-size: 0.875rem;
-    line-height: 1.6;
-    margin-left: 40px;
-}
-
-.favorite-icon {
-    font-size: 1.875rem;
-    color: #333;
-    position: absolute;
-    top: 20px;
-    left: 20px;
-}
-
-@media (max-width: 768px) {
-    .favorite-item {
-        width: calc(50% - 40px);
-    }
-
-    .about-content {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .about-text {
-        padding-left: 0;
-        text-align: center;
-    }
-
-    .about-img img {
-        max-width: 100%;
-    }
-
-    .projects-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-@media (max-width: 480px) {
-    .favorite-item {
-        width: calc(100% - 40px);
-    }
-
-    .container, .section {
-        margin: 150px auto 50px auto;
-        padding: 20px;
-        max-width: 100%;
-    }
-
-    .contact-btn, .projects-btn {
-        width: 100%; /* Full width on small screens */
-        padding: 15px 20px; /* Increase padding for touch devices */
-    }
-}
-
-/* Updated Projects Section */
-.projects-grid {
-    display: flex;
-    flex-wrap: wrap; /* Ensures the items wrap on smaller screens */
-    justify-content: space-between;
-    gap: 20px; /* Adjust gap between items */
-    margin-top: 40px;
-}
-
-.project-item {
-    flex: 1 1 calc(50% - 40px); /* Two items per row on medium screens */
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    transition: transform 0.3s ease;
-    margin-bottom: 20px; /* Add some space at the bottom */
-}
-
-.project-item:hover {
-    transform: translateY(-5px);
-}
-
-.project-img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-.project-info {
-    padding: 20px;
-}
-
-.project-category {
-    display: inline-block;
-    background-color: #e0f7fa;
-    color: #333;
-    padding: 5px 10px;
-    font-size: 14px;
-    border-radius: 5px;
-    margin-bottom: 10px;
-}
-
-.project-info h3 {
-    font-size: 18px;
-    margin: 10px 0;
-    color: #333;
-}
-
-.project-info p {
-    font-size: 14px;
-    color: #555;
-    line-height: 1.6;
-}
-
-.view-project {
-    display: inline-block;
-    background-color: #ff6600;
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    margin-top: 10px;
-    transition: background-color 0.3s ease;
-}
-
-.view-project:hover {
-    background-color: #ff5500;
-}
-
-footer {
-    text-align: center;
-    margin-top: 50px;
-    padding: 20px 0;
-    background-color: #333;
-    color: white;
-}
-
-footer a {
-    color: white;
-    text-decoration: underline;
-    transition: color 0.3s, text-decoration 0.3s;
-}
-
-footer a:hover {
-    text-decoration: none;
-    color: #d4c2a8;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .project-item {
-        flex: 1 1 calc(100% - 40px); /* Single item per row on smaller screens */
-    }
-}
-
-@media (max-width: 480px) {
-    .project-item {
-        flex: 1 1 calc
-    }
-}      
+<footer id="contact">
+        <div class="copyright">
+            © 2024 Krislyn Joy E. Guitguitin. All Rights Reserved.
+        </div>
+        <div class="social-links">
+            <a href="https://www.facebook.com/krislynjoy.guitguitin" target="_blank">
+                <i class="fab fa-facebook-f"></i>
+        </a>  
+            <a href="https://x.com/pine_gee19" target="_blank">
+                <i class="fab fa-twitter"></i>
+        </a>  
+            <a href="https://www.instagram.com/krlynjoyg/" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+    </footer>
+    
+    
+</body>
+</html>
