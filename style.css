@@ -183,7 +183,7 @@ nav ul li a:hover {
     background-image: url('fav-bg.jpg');
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-} 
+}
 
 .favorites-grid {
     display: flex;
@@ -221,47 +221,6 @@ nav ul li a:hover {
     position: absolute;
     top: 20px;
     left: 20px;
-}
-
-@media (max-width: 768px) {
-    .favorite-item {
-        width: calc(50% - 40px);
-    }
-
-    .about-content {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .about-text {
-        padding-left: 0;
-        text-align: center;
-    }
-
-    .about-img img {
-        max-width: 100%;
-    }
-
-    .projects-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-@media (max-width: 480px) {
-    .favorite-item {
-        width: calc(100% - 40px);
-    }
-
-    .container, .section {
-        margin: 150px auto 50px auto;
-        padding: 20px;
-        max-width: 100%;
-    }
-
-    .contact-btn, .projects-btn {
-        width: 100%; /* Full width on small screens */
-        padding: 15px 20px; /* Increase padding for touch devices */
-    }
 }
 
 /* Updated Projects Section */
@@ -366,10 +325,64 @@ footer .copyright {
     font-size: 0.875rem;
 }
 
+/* Responsive Adjustments */
 @media (max-width: 768px) {
-    footer {
-        flex-direction: column; /* Stacks items vertically on smaller screens */
+    .about-content {
+        flex-direction: column;
         text-align: center;
-        gap: 10px;
+    }
+
+    .about-text {
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .about-img img {
+        max-width: 100%;
+    }
+
+    .projects-grid {
+        flex-direction: column;
+        gap: 15px; /* Adjust gap between items */
+    }
+
+    .project-item {
+        flex: 1 1 100%;
+    }
+
+    .favorite-item {
+        width: calc(50% - 20px); /* Two items per row on small screens */
+    }
+}
+
+@media (max-width: 480px) {
+    nav ul li {
+        display: block;
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .container,
+    .section {
+        margin: 80px auto 50px auto;
+        padding: 10px;
+    }
+
+    .projects-grid {
+        flex-direction: column;
+    }
+
+    .favorite-item {
+        width: calc(100% - 20px); /* One item per row on very small screens */
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    footer .social-links {
+        justify-content: center;
+        margin-bottom: 10px;
     }
 }
