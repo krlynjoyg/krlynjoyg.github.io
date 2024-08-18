@@ -291,13 +291,12 @@ nav ul li a:hover {
         max-width: 100%;
     }
 
-    .contact-btn, .projects-btn {
+    .projects-btn {
         width: 100%; /* Full width on small screens */
         padding: 15px 20px; /* Increase padding for touch devices */
     }
 }
 
-/* Updated Projects Section */
 .projects-grid {
     display: flex;
     flex-wrap: wrap; /* Ensures the items wrap on smaller screens */
