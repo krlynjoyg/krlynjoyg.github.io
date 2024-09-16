@@ -203,6 +203,7 @@ nav ul li a:hover {
     max-width: 300px;
     height: 80px; 
     margin: 1em auto; 
+    position: center;
 }
 
 .favorites-grid {
