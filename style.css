@@ -115,7 +115,7 @@ nav ul li a:hover {
 .about-text {
     flex: 2;
     padding-left: 20px;
-    text-align: left;
+    text-align: justify;
 }
 
 .about-text h2 {
