@@ -306,13 +306,16 @@ nav ul li a:hover {
 }
 
 .project-item {
-    flex: 1 1 calc(50% - 40px); /* Two items per row on medium screens */
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    transition: transform 0.3s ease;
-    margin-bottom: 20px; /* Add some space at the bottom */
+    display: flex;
+    justify-content: center; /* Horizontal centering */
+    align-items: center; /* Vertical centering */
+    flex-direction: column;
+    padding: 10px;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 300px; /* Adjust the width of each card */
+    margin: 20px; /* Space between the cards */
 }
 
 .project-item:hover {
@@ -398,3 +401,15 @@ nav ul li a:hover {
     margin-top: 40px;
 }
 
+.talent-item {
+    display: flex;
+    justify-content: center; /* Horizontal centering */
+    align-items: center; /* Vertical centering */
+    flex-direction: column;
+    padding: 10px;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 300px; /* Adjust the width of each card */
+    margin: 20px; /* Space between the cards */
+}
