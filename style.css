@@ -197,6 +197,7 @@ ul li:hover a {
 }
 
 .imgbox {
+    padding: 50px 0;
     position: relative;
     width: 800px;
     top: -50px;
@@ -205,10 +206,11 @@ ul li:hover a {
 }
 
 .imgbox img {
-    width: 50%;
+    margin-top: 90px;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
     border-radius: 50%;
-    margin-top: 100px;
-    margin-left: 90px;
 }
 
 .imagedata:hover .imgbox {
@@ -274,6 +276,50 @@ ul li:hover a {
     }
 }
 
+@media (max-width: 812px) {
+    nav {
+        padding: 10px 40px; /* Reduce padding for medium screens */
+    }
+
+    ul {
+        margin-right: 40px; /* Adjust margin for medium screens */
+    }
+
+    .row {
+        flex-direction: column; /* Stack columns vertically */
+        height: auto; /* Allow for flexible height */
+    }
+
+    .cols {
+        max-width: 100%; /* Full width on small screens */
+        padding-left: 0; /* Remove left padding */
+        padding-right: 0; /* Remove right padding */
+    }
+
+    .textdata h2 {
+        font-size: 2em; /* Reduce font size */
+    }
+
+    .textdata h3 {
+        font-size: 1em; /* Reduce font size */
+    }
+
+    .textdata p {
+        font-size: 16px; /* Reduce font size */
+    }
+
+    .imgbox {
+        width: 100%; /* Full width for images */
+        margin: 0; /* Center images */
+    }
+
+    .imgbox img {
+        width: 65%; /* Slightly larger image size */
+        margin-left: 0; /* Center images */
+    }
+}
+
+
 @media (max-width: 768px) {
     nav .nav-list {
         display: none; /* Hide navigation on mobile */
@@ -305,6 +351,16 @@ ul li:hover a {
 
     .cols.imagedata {
         margin: 20px 0;
+    }
+
+    .imgbox {
+        width: 100%; /* Full width for images */
+        margin: 0; /* Center images */
+    }
+
+    .imgbox img {
+        width: 65%; /* Slightly larger image size */
+        margin-left: 0; /* Center images */
     }
 
     .imagedata img {
@@ -350,6 +406,16 @@ ul li:hover a {
         text-align: right;
     }
 
+    .imgbox {
+        width: 100%; /* Full width for images */
+        margin: 0; /* Center images */
+    }
+
+    .imgbox img {
+        width: 65%; /* Slightly larger image size */
+        margin-left: 0; /* Center images */
+    }
+
     .imgbox img {
         width: 100%;
     }
@@ -379,6 +445,20 @@ ul li:hover a {
     .sociallinks i {
         font-size: 1.5em; /* Adjust social icons size */
     }
+
+    .imgbox {
+        width: 100%; /* Full width for images */
+        margin: 0; /* Center images */
+    }
+
+    .imgbox img {
+        width: 65%; /* Slightly larger image size */
+        margin-left: 0; /* Center images */
+    }
+
+    .imgbox img {
+        width: 100%;
+    }
 }
 
 @media (max-width: 400px) {
@@ -393,6 +473,20 @@ ul li:hover a {
     .btn a {
         padding: 10px 20px;
         font-size: 14px;
+    }
+
+    .imgbox {
+        width: 100%; /* Full width for images */
+        margin: 0; /* Center images */
+    }
+
+    .imgbox img {
+        width: 65%; /* Slightly larger image size */
+        margin-left: 0; /* Center images */
+    }
+
+    .imgbox img {
+        width: 100%;
     }
 }
 
@@ -449,6 +543,8 @@ ul li:hover a {
     }
 }
 
+
+
 .section {
     background: var(--primary);
     text-align: center;
@@ -458,7 +554,6 @@ ul li:hover a {
     padding: 10px; /* Control padding */
     box-sizing: border-box; /* Include padding in width */
 }
-
 
 .about-content {
     display: flex;
@@ -562,7 +657,6 @@ ul li:hover a {
     margin: 0 auto; /* Center the section horizontally */
     padding: 0 20px; /* Add some padding for better spacing */
 }
-
 
 /* Section Heading */
 .about-favorites h2 {
