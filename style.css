@@ -203,20 +203,27 @@ ul li:hover a {
     }
 }
 
+@media screen and (max-width: 668px) {
+    .sociallinks i {
+        font-size: 2em; /* Adjust icon size for tablets */
+        margin-right: 5px; /* Adjust spacing */
+    }
+}
+
 /* For small screens (mobile) */
 @media screen and (max-width: 480px) {
 
     .sociallinks i {
-        font-size: 2em; /* Smaller icon size for mobile */
-        margin-right: 5px; /* Reduce margin */
+        font-size: 1.5em; /* Smaller icon size for mobile */
+        margin-right: 2px; /* Reduce margin */
     }
 }
 
 @media screen and (max-width: 380px) {
 
     .sociallinks i {
-        font-size: 1.5em; /* Smaller icon size for mobile */
-        margin-right: 2px; /* Reduce margin */
+        font-size: 1em; /* Smaller icon size for mobile */
+        margin-right: 0px; /* Reduce margin */
     }
 }
 
