@@ -110,7 +110,7 @@ ul li:hover a {
 }
 
 .textdata {
-    margin-top: 20px; /* Add top margin to push text below the navbar */
+    margin-top: 10px; /* Add top margin to push text below the navbar */
     text-align: center;
     padding: 0 20px;
     margin-left: 10px;
@@ -307,7 +307,11 @@ ul li:hover a {
 
     .imgbox img {
         width: 70%; /* Slightly larger image size */
-        margin-left: px; /* Center images */
+        margin-left: 240px; /* Center images */
+    }
+
+    .imgbox img {
+        width: 100%;
     }
 }
 
@@ -350,7 +354,11 @@ ul li:hover a {
 
     .imgbox img {
         width: 65%; /* Slightly larger image size */
-        margin-left: 30px; /* Center images */
+        margin-left: 200px; /* Center images */
+    }
+
+    .imgbox img {
+        width: 100%;
     }
 }
 
@@ -382,10 +390,6 @@ ul li:hover a {
     .row {
         flex-direction: column;
         text-align: center;
-    }
-
-    .cols.imagedata {
-        margin: 20px 0;
     }
 
     .imgbox {
