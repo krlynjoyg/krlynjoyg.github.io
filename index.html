@@ -1,75 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Krislyn's Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"/>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
 </head>
 <body>
-    <div class="container">
+    <div class="container" id="Home">
         <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#favorites">Favorites</a></li>
-                <li><a href="#projects">School Projects</a></li>
-                <li><a href="#talents">Talents</a></li>
+            <a href="#" class="logo">K.<b>J.</b>oyg</a>
+            <ul class="nav-list">
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#About-Me">About Me</a></li>
+                <li><a href="#Favorites">Favorites</a></li>
+                <li><a href="#School-Projects">School Projects</a></li>
+                <li><a href="#Talents">Talents</a></li>
             </ul>
+            <!-- Hamburger menu icon -->
+            <div class="menu-icon">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class="toggleSwitch">
+                <i class="fa fa-sun"></i>
+                <i class="fa fa-moon"></i>
+            </div>
         </nav>
-        <div class="header" id="home">
-            <img src="me.jpg" alt="Krislyn Joy E. Guitguitin's Profile Picture" class="profile-img">
-        </div>
-        <div class="content">
-            <h1>Krislyn Joy E. Guitguitin</h1>
-            <h1>BSIT-2A</h1>
-            <hr>
-            <br>
+        <div class="row">
+            <div class="cols textdata">
+                <h2>Hi, I'm <span>Krislyn Joy</span></h2>
+                <h3>I.T Student</h3>
+                <p>Currently studying at the University of the Immaculate Conception.</p>
+                <div class="btn">
+                    <a href="#About Me" class="projects-btn">Know Me!</a>
+                </div>
+                <div class="sociallinks">
+                    <a href="https://www.instagram.com/krlynjoyg/" target="_blank">
+                        <i class="fab fa-instagram"></i></a>
+                    <a href="https://github.com/krlynjoyg/krlynjoyg.github.io" target="_blank">
+                        <i class="fab fa-github"></i></a>
+                    <a href="https://www.facebook.com/krislynjoy.guitguitin" target="_blank">
+                        <i class="fab fa-facebook"></i></a>
+                </div>
+            </div>
+            <div class="cols imagedata">
+                <div class="imgbox">
+                    <img src="me.jpg" alt="Krislyn Joy">
+                </div>
+            </div>
         </div>
     </div>
 
-    <div class="section" id="about">
+    <div class="section" id="About-Me">
         <div class="about-content">
             <div class="about-img">
                 <img src="me.png" alt="Krislyn Joy E. Guitguitin">
             </div>
             <div class="about-text">
-                <h2>About Me</h2>
-                <hr>
+                <h3>About Me</h3>
+                <div class="horizontal"><hr></div>
                 <br>
-                    <p>I'm Krislyn Joy E. Guitguitin, a second-year Information Technology student at the University of the Immaculate Conception.</p>
+                    <p>I'm Krislyn Joy E. Guitguitin, a second-year Information Technology student.</p>
+                    <br>
                     <p>I love playing instruments such as guitar, bass, piano, and drums. My sports are badminton and volleyball. I’m currently learning new languages such as Korean (Hangul) and Japanese (Hiragana). Also, I love music and singing.</p>
-                <div class="personality-traits">
-                    <div class="trait">
-                        <span>100%</span>
-                        <p>Compassionate</p>
-                    </div>
-                    <div class="trait">
-                        <span>100%</span>
-                        <p>Ambivert</p>
-                    </div>
-                </div>
+                    <br>
                 <div class="buttons">
-                    <a href="#projects" class="projects-btn">PROJECTS</a>
-                </div>
-                <div class="social-links">
-                    <a href="https://www.facebook.com/krislynjoy.guitguitin" target="_blank"> 
-                         <i class="fab fa-facebook-f"></i> 
-                    </a> |
-                    <a href="https://x.com/pine_gee19" target="_blank">
-                         <i class="fab fa-twitter"></i>
-                    </a> |
-                    <a href="https://www.instagram.com/krlynjoyg/" target="_blank">
-                         <i class="fab fa-instagram"></i>
-                    </a>
+                    <a href="#School Projects" class="projects-btn">PROJECTS</a>
                 </div>
             </div>
         </div>
     </div>
-    
 
-    <div class="section" id="favorites">
+    <div class="section" id="Favorites">
         <div class="about-favorites">
             <h2>My Favorites</h2>
             <hr>
@@ -109,140 +113,159 @@
             </div>
         </div>
     </div>
-        
 
-    <div class="section" id="projects">
+    <div class="section" id="School-Projects">
         <div class="about-projects">
             <h2>School Projects</h2>
             <hr>
             <br>
             <div class="projects-grid">
-            <!-- First Project -->
-                 <div class="project-item">
-                      <img src="portfolio-1.jpg" alt="Tap&Sign" class="project-img">
-                      <div class="project-info">
-                           <span class="project-category">FIGMA DESIGN</span>
-                           <h3>Tap&Sign (Where touch and gesture redefine communication)</h3>
-                           <p>We designed an application last semester called "Tap&Sign".</p>
-                           <a href="https://tinyurl.com/m5dj9vvj" target="_blank" class="view-project">VIEW PROJECT</a>
-                     </div>
-                 </div>
-            <!-- Second Project -->
-                 <div class="project-item">
-                      <img src="portfolio-2.jpg" alt="UIC School Hymn Video" class="project-img">
-                      <div class="project-info">
-                           <span class="project-category">UIC SCHOOL HYMN</span>
-                           <h3>UIC School Hymn Video (CCS)</h3>
-                           <p>Bringing tradition to life through music and unity. 🌟Proudly presenting our UIC School Hymn, a heartfelt collaboration with the CCS department.</p>
-                      </div>
-                 </div>  
-            <!-- Third Project -->
-                 <div class="project-item">
-                      <img src="portfolio-3.jpg" alt="ICTDU Booking Reservation" class="project-img">
-                      <div class="project-info">
-                           <span class="project-category">ICTDU SYSTEM</span>
-                           <h3>ICTDU Booking Reservation</h3>
-                           <p>We created a system of the ICTDU Booking Reservation - system go-to solution for easy and efficient reservations.</p>
-                     </div>
-                 </div>
-            <!-- Fourth Project -->
-                 <div class="project-item">
-                      <img src="portfolio-4.jpg" alt="Art Appreciation Project" class="project-img">
-                      <div class="project-info">
-                           <span class="project-category">ART APPRECIATION</span>
-                           <h3>Christmas Song Parody</h3>
-                           <p>Our project in Art Appreciation last semester was a Christmas song parody. We changed the lyrics of "Here Comes Santa Claus," "Cupid," "Rudolph the Red-Nosed Reindeer," "Jingle Bell Rock," and "All I Want for Christmas Is You," and we mashed up the songs.</p>
-                           <a href="https://tinyurl.com/5hycj6nu" target="_blank" class="view-project">VIEW PROJECT</a>
-                      </div>
-                 </div>
-           </div>
+                <!-- First Project -->
+                <div class="project-item">
+                    <img src="portfolio-1.jpg" alt="Tap&Sign" class="project-img">
+                    <div class="project-info">
+                        <span class="project-category">FIGMA DESIGN</span>
+                        <h3>Tap&Sign (Where touch and gesture redefine communication)</h3>
+                        <p>We designed an application last semester called "Tap&Sign".</p>
+                        <a href="https://tinyurl.com/m5dj9vvj" target="_blank" class="view-project">VIEW PROJECT</a>
+                    </div>
+                </div>
+                <!-- Second Project -->
+                <div class="project-item">
+                    <img src="portfolio-2.jpg" alt="UIC School Hymn Video" class="project-img">
+                    <div class="project-info">
+                        <span class="project-category">UIC SCHOOL HYMN</span>
+                        <h3>UIC School Hymn Video (CCS)</h3>
+                        <p>Bringing tradition to life through music and unity. 🌟 Proudly presenting our UIC School Hymn, a heartfelt collaboration with the CCS department.</p>
+                    </div>
+                </div>
+                <!-- Third Project -->
+                <div class="project-item">
+                    <img src="portfolio-3.jpg" alt="ICTDU Booking Reservation" class="project-img">
+                    <div class="project-info">
+                        <span class="project-category">ICTDU SYSTEM</span>
+                        <h3>ICTDU Booking Reservation</h3>
+                        <p>We created a system of the ICTDU Booking Reservation - system go-to solution for easy and efficient reservations.</p>
+                    </div>
+                </div>
+                <!-- Fourth Project -->
+                <div class="project-item">
+                    <img src="portfolio-4.jpg" alt="Art Appreciation Project" class="project-img">
+                    <div class="project-info">
+                        <span class="project-category">ART APPRECIATION</span>
+                        <h3>Christmas Song Parody</h3>
+                        <p>Our project in Art Appreciation last semester was a Christmas song parody. We changed the lyrics of several Christmas songs and mashed them up.</p>
+                        <a href="https://tinyurl.com/5hycj6nu" target="_blank" class="view-project">VIEW PROJECT</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
-    <div class="section" id="projects">
-        <div class="about-projects">
+    <div class="section" id="School Projects">
+        <div class="about-html">
             <h2>HTML Activities</h2>
             <hr>
             <br>
-            <div class="projects-grid">
-            <!-- First Activity -->
-                 <div class="project-item">
-                    <img src="portfolio-5.jpeg" alt="Fashion Project" class="project-img">
-                    <div class="project-info">
-                         <span class="project-category">WEB DEVELOPMENT</span>
-                         <h3>FASHION BLOG ACTIVITY</h3>
-                         <p>We include plenty of pictures, links, lists, and other HTML elements that I've learned so that Isabelle's fans have plenty to read.</p>
-                         <a href="htmlfashionblog/fashion.html" target="_blank" class="view-project">VIEW PROJECT</a>
+            <div class="html-grid">
+                <!-- First Activity -->
+                <div class="html-item">
+                    <img src="portfolio-5.jpeg" alt="Fashion Project" class="html-img">
+                    <div class="html-info">
+                        <span class="html-category">WEB DEVELOPMENT</span>
+                        <h3>FASHION BLOG ACTIVITY</h3>
+                        <p>We used various HTML elements, including pictures, links, and lists, to create an engaging blog for Isabelle’s fans.</p>
+                        <a href="htmlfashionblog/fashion.html" target="_blank" class="view-project">VIEW ACTIVITY</a>
                     </div>
-               </div>
-            <!-- Second Activity -->
-            <div class="project-item">
-                <img src="portfolio-6.jpg" alt="Health Project" class="project-img">
-                <div class="project-info">
-                     <span class="project-category">WEB DEVELOPMENT</span>
-                     <h3>HEALTH BLOG ACTIVITY</h3>
-                     <p>Kale Caesar Quinoa Salad with Roasted Chicken.</p>
-                     <a href="health/health.html" target="_blank" class="view-project">VIEW PROJECT</a>
-                   </div>
-              </div>
-              <!-- Third Activity -->
-            <div class="project-item">
-                <img src="olivia.png" alt="Health Project" class="project-img">
-                <div class="project-info">
-                     <span class="project-category">WEB DEVELOPMENT</span>
-                     <h3>HEALTH BLOG ACTIVITY</h3>
-                     <p>Kale Caesar Quinoa Salad with Roasted Chicken.</p>
-                     <a href="olivia_portfolio/index.html" target="_blank" class="view-project">VIEW PROJECT</a>
-                   </div>
-              </div>
-           </div>
+                </div>
+                <!-- Second Activity -->
+                <div class="html-item">
+                    <img src="portfolio-6.jpg" alt="Health Project" class="html-img">
+                    <div class="html-info">
+                        <span class="html-category">WEB DEVELOPMENT</span>
+                        <h3>HEALTH BLOG ACTIVITY</h3>
+                        <p>In this activity, we created a blog about healthy eating, featuring a Kale Caesar Quinoa Salad with Roasted Chicken.</p>
+                        <a href="health/health.html" target="_blank" class="view-project">VIEW ACTIVITY</a>
+                    </div>
+                </div>
+                <!-- Third Activity -->
+                <div class="html-item">
+                    <img src="olivia.png" alt="Portfolio Project" class="html-img">
+                    <div class="html-info">
+                        <span class="html-category">WEB DEVELOPMENT</span>
+                        <h3>PORTFOLIO ACTIVITY</h3>
+                        <p>This activity showcases Olivia’s portfolio with responsive design elements and creative use of HTML.</p>
+                        <a href="olivia_portfolio/index.html" target="_blank" class="view-project">VIEW ACTIVITY</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
-
-
-    <div class="section" id="talents">
+    <div class="section" id="Talents">
         <div class="about-talents">
             <h2>Talents</h2>
             <hr>
             <br>
             <div class="talents-grid">
-            <!-- First Talent -->
-                 <div class="talent-item">
-                      <img src="talent-1.jpg" alt="guitar" class="project-img">
-                      <div class="project-info">
-                           <span class="project-category">GUITAR</span>
-                           <h3>Playing guitar</h3>
-                      </div>
-                </div>
-            <!-- Second Talent -->
-                 <div class="talent-item">
-                      <img src="talent-2.jpg" alt="bass" class="project-img">
-                      <div class="project-info">
-                           <span class="project-category">BASS</span>
-                           <h3>Playing bass</h3>
-                     </div>
-                 </div>
-            <!-- Third Talent -->
+                <!-- First Talent -->
                 <div class="talent-item">
-                     <img src="talent-3.png" alt="piano" class="project-img">
-                     <div class="project-info">
-                          <span class="project-category">PIANO</span>
-                          <h3>Playing piano</h3>
-                     </div>
-                 </div>
-            <!-- Fourth Talent -->
-                 <div class="talent-item">
-                      <img src="talent-4.jpg" alt="singing" class="project-img">
-                      <div class="project-info">
-                           <span class="project-category">SINGING</span>
-                           <h3>I love to sing</h3>
-                     </div>
-                 </div>
+                    <img src="talent-1.jpg" alt="guitar" class="talent-img">
+                    <div class="talent-info">
+                        <span class="talent-category">GUITAR</span>
+                        <h3>Playing Guitar</h3>
+                    </div>
+                </div>
+                <!-- Second Talent -->
+                <div class="talent-item">
+                    <img src="talent-2.jpg" alt="bass" class="talent-img">
+                    <div class="talent-info">
+                        <span class="talent-category">BASS</span>
+                        <h3>Playing Bass</h3>
+                    </div>
+                </div>
+                <!-- Third Talent -->
+                <div class="talent-item">
+                    <img src="talent-3.png" alt="piano" class="talent-img">
+                    <div class="talent-info">
+                        <span class="talent-category">PIANO</span>
+                        <h3>Playing Piano</h3>
+                    </div>
+                </div>
+                <!-- Fourth Talent -->
+                <div class="talent-item">
+                    <img src="talent-4.jpg" alt="singing" class="talent-img">
+                    <div class="talent-info">
+                        <span class="talent-category">SINGING</span>
+                        <h3>I Love to Sing</h3>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
     
+
+
+    <!--dark/light mode-->
+    <script>
+        const toggleSwitch = document.querySelector('.toggleSwitch');
+        toggleSwitch.addEventListener('click', function(){
+            document.body.classList.toggle('switch');
+        })
+    </script>
+
+    <script>
+        const menuIcon = document.querySelector('.menu-icon');
+        const navList = document.querySelector('.nav-list');
+
+        menuIcon.addEventListener('click', function() {
+        navList.classList.toggle('active');
+    });
+    </script>
+
     
 </body>
 </html>
+
+
+
