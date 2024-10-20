@@ -171,6 +171,20 @@ ul li:hover a {
     color: var(--textcolor);
 }
 
+@media screen and (max-width: 1200px) {
+    .sociallinks i {
+        font-size: 3.5em; /* Adjust icon size for tablets */
+        margin-right: 14px; /* Adjust spacing */
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .sociallinks i {
+        font-size: 3em; /* Adjust icon size for tablets */
+        margin-right: 11px; /* Adjust spacing */
+    }
+}
+
 /* For medium screens (tablets) */
 @media screen and (max-width: 768px) {
     .sociallinks i {
@@ -181,14 +195,18 @@ ul li:hover a {
 
 /* For small screens (mobile) */
 @media screen and (max-width: 480px) {
-    .sociallinks {
-        width: 100%; /* Make icons full-width on mobile */
-        bottom: 10px; /* Reduce bottom space on small screens */
-    }
 
     .sociallinks i {
         font-size: 2em; /* Smaller icon size for mobile */
         margin-right: 5px; /* Reduce margin */
+    }
+}
+
+@media screen and (max-width: 380px) {
+
+    .sociallinks i {
+        font-size: 1.5em; /* Smaller icon size for mobile */
+        margin-right: 2px; /* Reduce margin */
     }
 }
 
