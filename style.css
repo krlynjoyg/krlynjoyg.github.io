@@ -447,21 +447,18 @@ ul li:hover a {
         font-size: 20px;
         padding: 10px 0;
     }
-
-    .about-img img {
-        max-width: 100%;
-    }
 }
 
 .section {
+    background: var(--primary);
     text-align: center;
-    margin: 50px auto;
-    max-width: 1200px;
-    background-color: var(--primary-color);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 1300px;
+    width: 100%; /* Ensure it takes full width */
+    margin: 0 auto; /* Center the section */
+    padding: 10px; /* Control padding */
+    box-sizing: border-box; /* Include padding in width */
 }
+
 
 .about-content {
     display: flex;
@@ -469,7 +466,6 @@ ul li:hover a {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-image: url('fav-bg.jpg');
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     flex-wrap: wrap;
@@ -494,7 +490,6 @@ ul li:hover a {
 }
 
 .about-text h3 {
-    margin-left: 5px;
     font-size: 3em;
     font-weight: 400;
     color: var(--secondary);
@@ -502,30 +497,29 @@ ul li:hover a {
 }
 
 .about-text p {
+    margin-left: 5px;
     font-size: 1rem;
     line-height: 1.6;
+    color: var(--secondary);
     margin-bottom: 10px;
-    color: #555;
 }
 
-.personality-traits {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-top: 20px;
-}
+@media (max-width: 768px) {
 
-.trait {
-    text-align: left;
-    font-size: 1.125rem;
-    color: #ff6600;
-    flex: 1;
-    margin-bottom: 20px;
-}
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
 
-.trait span {
-    font-size: 1.5rem;
-    font-weight: bold;
+    .about-text {
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .about-img img {
+        max-width: 100%;
+    }
+
 }
 
 .horizontal{
@@ -557,27 +551,6 @@ ul li:hover a {
 .projects-btn:hover {
     transition: 0.3s ease;
     padding: 10px 40px;
-}
-
-@media (max-width: 768px) {
-
-    .about-content {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .about-text {
-        padding-left: 0;
-        text-align: center;
-    }
-
-    .about-img img {
-        max-width: 100%;
-    }
-
-    .projects-grid {
-        grid-template-columns: 1fr;
-    }
 }
 
 /* Wrapper Container to Align with 'About Me' Section */
