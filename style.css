@@ -234,15 +234,13 @@ ul li:hover a {
 
 .imgbox {
     position: relative;
-    width: 800px;
-    top: -50px;
+    width: 600px;
+    top: -10px;
     z-index: 1;
     transition: 0.3s ease;
 }
 
 .imgbox img {
-    margin-right: 250px;
-    margin-top: 90px;
     width: 100%;
     max-width: 400px;
     height: auto;
@@ -251,17 +249,6 @@ ul li:hover a {
 
 .imagedata:hover .imgbox {
     transform: translate(-10px);
-}
-
-.imagedata .pattern {
-    position: absolute;
-    background: url('paint.png');
-    height: 100%;
-    width: 50%;
-    background-size: cover;
-    right: 40px;
-    top: 50px;
-    transition: 0.3s ease;
 }
 
 .imagedata:hover .pattern {
@@ -307,16 +294,18 @@ ul li:hover a {
     }
 
     .imgbox img {
-        width: 70%; /* Slightly larger image size */
-        margin-left: 200px; /* Center images */
+        margin-top: 80px;
+        width: 65%; /* Slightly larger image size */
+        margin-left: 0; /* Center images */
     }
 
-    .imgbox img {
-        width: 100%;
+    .imagedata img {
+        max-width: 400px;
+        height: auto;
     }
 }
 
-@media (max-width: 812px) {
+@media (max-width: 868px) {
     nav {
         padding: 10px 40px; /* Reduce padding for medium screens */
     }
@@ -354,12 +343,14 @@ ul li:hover a {
     }
 
     .imgbox img {
+        margin-top: 80px;
         width: 65%; /* Slightly larger image size */
-        margin-left: 200px; /* Center images */
+        margin-left: 0; /* Center images */
     }
 
-    .imgbox img {
-        width: 100%;
+    .imagedata img {
+        max-width: 400px;
+        height: auto;
     }
 }
 
@@ -399,12 +390,13 @@ ul li:hover a {
     }
 
     .imgbox img {
+        margin-top: 60px;
         width: 65%; /* Slightly larger image size */
         margin-left: 0; /* Center images */
     }
 
     .imagedata img {
-        max-width: 100%;
+        max-width: 400px;
         height: auto;
     }
 
@@ -452,13 +444,16 @@ ul li:hover a {
     }
 
     .imgbox img {
+        margin-top: 60px;
         width: 65%; /* Slightly larger image size */
         margin-left: 0; /* Center images */
     }
 
-    .imgbox img {
-        width: 100%;
+    .imagedata img {
+        max-width: 400px;
+        height: auto;
     }
+
 }
 
 @media (max-width: 480px) {
@@ -492,27 +487,40 @@ ul li:hover a {
     }
 
     .imgbox img {
+        margin-top: 60px;
         width: 65%; /* Slightly larger image size */
         margin-left: 0; /* Center images */
     }
 
-    .imgbox img {
-        width: 100%;
+    .imagedata img {
+        max-width: 400px;
+        height: auto;
     }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 380px) {
     .textdata h2 {
-        font-size: 20px;
+        font-size: 2em; /* Further reduce font size */
     }
 
     .textdata h3 {
-        font-size: 16px;
+        font-size: 1.5em; /* Further reduce font size */
     }
 
-    .btn a {
-        padding: 10px 20px;
-        font-size: 14px;
+    .textdata p {
+        font-size: 14px; /* Further reduce font size */
+    }
+
+    .btn button {
+        font-size: 18px; /* Further reduce button text */
+    }
+
+    .sociallinks {
+        bottom: 10px; /* Adjust social links positioning */
+    }
+
+    .sociallinks i {
+        font-size: 1.5em; /* Adjust social icons size */
     }
 
     .imgbox {
@@ -521,12 +529,14 @@ ul li:hover a {
     }
 
     .imgbox img {
+        margin-top: 60px;
         width: 65%; /* Slightly larger image size */
         margin-left: 0; /* Center images */
     }
 
-    .imgbox img {
-        width: 100%;
+    .imagedata img {
+        max-width: 400px;
+        height: auto;
     }
 }
 
