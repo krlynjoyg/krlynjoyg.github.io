@@ -316,9 +316,7 @@ ul li:hover a {
         justify-content: center;
         margin-top: 20px;
     }
-}
 
-@media (max-width: 768px) {
     .textdata {
         margin-top: 100px; /* Adjust margin on mobile */
     }
@@ -334,6 +332,8 @@ ul li:hover a {
     .textdata p {
         font-size: 1em;
     }
+
+    
 }
 
 @media (max-width: 576px) {
@@ -447,26 +447,32 @@ ul li:hover a {
         font-size: 20px;
         padding: 10px 0;
     }
+
+    .about-img img {
+        max-width: 100%;
+    }
 }
 
 .section {
-    background: var(--primary);
     text-align: center;
-    max-width: 1300px;
-    width: 100%; /* Ensure it takes full width */
-    margin: 0 auto; /* Center the section */
-    padding: 10px; /* Control padding */
-    box-sizing: border-box; /* Include padding in width */
+    margin: 50px auto;
+    max-width: 1200px;
+    background-color: var(--primary-color);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .about-content {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center; /* Center content horizontally */
-    width: 100%; /* Take full width */
-    padding: 10px;
-    gap: 20px; /* Add space between elements */
+    padding: 20px;
+    background-image: url('fav-bg.jpg');
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap;
 }
 
 .about-img {
@@ -474,19 +480,17 @@ ul li:hover a {
     text-align: center;
 }
 
-
 .about-img img {
+    width: 100%;
     max-width: 80%;
     height: auto;
-    object-fit: cover;
-    margin-bottom: 50px;
-    margin-right: 20px;
+    border-radius: 10px;
 }
 
 .about-text {
     flex: 2;
+    padding-left: 20px;
     text-align: justify;
-    max-width: 600px; /* Control text width */
 }
 
 .about-text h3 {
@@ -498,11 +502,30 @@ ul li:hover a {
 }
 
 .about-text p {
-    margin-left: 5px;
-    font-size: 22px;
-    font-weight: 500;
-    color: var(--secondary);
-    margin-right: 65px;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.personality-traits {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.trait {
+    text-align: left;
+    font-size: 1.125rem;
+    color: #ff6600;
+    flex: 1;
+    margin-bottom: 20px;
+}
+
+.trait span {
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
 .horizontal{
@@ -534,6 +557,27 @@ ul li:hover a {
 .projects-btn:hover {
     transition: 0.3s ease;
     padding: 10px 40px;
+}
+
+@media (max-width: 768px) {
+
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-text {
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .about-img img {
+        max-width: 100%;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* Wrapper Container to Align with 'About Me' Section */
@@ -967,7 +1011,6 @@ audio {
 .switch .fa-moon{
     display: none;
 }
-
 
 
 
