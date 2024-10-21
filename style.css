@@ -266,7 +266,7 @@ ul li:hover a {
     }
 
     .row {
-        flex-direction: column; /* Stack columns vertically */
+        flex-direction: column-reverse; /* Stack columns vertically */
         height: auto; /* Allow for flexible height */
     }
 
@@ -315,7 +315,7 @@ ul li:hover a {
     }
 
     .row {
-        flex-direction: column; /* Stack columns vertically */
+        flex-direction: column-reverse; /* Stack columns vertically */
         height: auto; /* Allow for flexible height */
     }
 
@@ -366,7 +366,8 @@ ul li:hover a {
         position: absolute;
         top: 60px;
         right: 0;
-        background-color: #fff; /* You can change this based on your theme */
+        background: var(--secondary); 
+        background-color: var(--primary);/* You can change this based on your theme */
         width: 100%;
         text-align: right;
     }
@@ -380,9 +381,10 @@ ul li:hover a {
     }
 
     .row {
-        flex-direction: column;
+        flex-direction: column-reverse;
         text-align: center;
     }
+
 
     .imgbox {
         width: 100%; /* Full width for images */
@@ -438,6 +440,11 @@ ul li:hover a {
         text-align: right;
     }
 
+    .row {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
     .imgbox {
         width: 100%; /* Full width for images */
         margin: 0; /* Center images */
@@ -457,6 +464,11 @@ ul li:hover a {
 }
 
 @media (max-width: 480px) {
+    .row {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
     .textdata h2 {
         font-size: 2em; /* Further reduce font size */
     }
@@ -499,6 +511,11 @@ ul li:hover a {
 }
 
 @media (max-width: 380px) {
+    .row {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
     .textdata h2 {
         font-size: 2em; /* Further reduce font size */
     }
