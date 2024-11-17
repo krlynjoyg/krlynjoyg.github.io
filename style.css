@@ -1025,6 +1025,17 @@ audio {
 }
 
 /* Section Alignment */
+
+.section {
+    background: var(--primary);
+    text-align: center;
+    max-width: 1300px;
+    width: 100%; /* Ensure it takes full width */
+    margin: 0 auto; /* Center the section */
+    padding: 10px; /* Control padding */
+    box-sizing: border-box; /* Include padding in width */
+}
+
 .about-talents {
     background: var(--primary);
     max-width: 1200px;
