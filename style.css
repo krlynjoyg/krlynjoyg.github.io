@@ -315,8 +315,10 @@ ul li:hover a {
 }
 
 @media (max-width: 868px) {
-    nav {
-        padding: 10px 40px; /* Reduce padding for medium screens */
+    .nav-list {
+        flex-direction: row; /* Ensure items are in a row */
+        justify-content: flex-start; /* Left-align items */
+        gap: 15px; /* Adjust spacing for mobile */
     }
 
     ul {
