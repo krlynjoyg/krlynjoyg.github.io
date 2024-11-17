@@ -1029,7 +1029,6 @@ audio {
 .section {
     background: var(--primary);
     text-align: center;
-    max-width: 1300px;
     width: 100%; /* Ensure it takes full width */
     margin: 0 auto; /* Center the section */
     padding: 10px; /* Control padding */
@@ -1156,6 +1155,5 @@ audio {
 .switch .fa-moon{
     display: none;
 }
-
 
 
