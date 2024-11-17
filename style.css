@@ -30,17 +30,18 @@ body {
     position: relative;
     min-height: 100vh; /* Ensure it covers full viewport height */
     width: 100%;
-    background: var(--primary); /* Background remains as is */
+    background: var(--primary);
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start; /* Align content to the top to reduce white space */
     overflow: hidden;
+    padding-top: 50px;
 }
 
 .container .row{
     text-align: center;
-    margin: 100px auto 50px auto;
+    margin: 50px auto; /* Reduce the top and bottom margin */
     max-width: 1200px;
     background-color: var(--primary);
     padding: 20px;
@@ -610,27 +611,19 @@ ul li:hover a {
     }
 }
 
-
-
-.section {
-    background: var(--primary);
-    text-align: center;
-    max-width: 1300px;
-    width: 100%; /* Ensure it takes full width */
-    margin: 0 auto; /* Center the section */
-    padding: 10px; /* Control padding */
-    box-sizing: border-box; /* Include padding in width */
-}
-
 .about-content {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 20px 0;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     flex-wrap: wrap;
+}
+    
+#About-Me {
+    margin-bottom: 20; /* Adjust this value to reduce spacing */
 }
 
 .about-img {
@@ -648,7 +641,7 @@ ul li:hover a {
 .about-text {
     flex: 2;
     padding-left: 20px;
-    text-align: justify;
+    text-align: left;
 }
 
 .about-text h3 {
@@ -682,11 +675,19 @@ ul li:hover a {
         max-width: 100%;
     }
 
+    .horizontal {
+        width: 50%; /* Centered with a smaller width on small screens */
+        margin: 0 auto; /* Ensures centering */
+    }
+
 }
 
 .horizontal{
-    margin-left: 5px;
-    margin-right: 65px;
+    margin: 0 auto; /* Ensures centering */
+    width: 100%; /* Full width for desktop screens */
+    max-width: 100%; /* Prevent it from overflowing */
+    border-top: 1px solid var(--secondary); /* Line style */
+    display: block; 
 }
 
 .buttons {
@@ -719,10 +720,15 @@ ul li:hover a {
 .about-favorites {
     background: var(--primary);
     text-align: center;
-    width: 100%; /* Ensure it takes full width */
-    max-width: 900px; /* Adjust this to match your layout */
+    width: 100%; /* Full width */
+    max-width: 900px; /* Keep it centered and manageable */
     margin: 0 auto; /* Center the section horizontally */
-    padding: 0 20px; /* Add some padding for better spacing */
+    padding: 20px 0;
+}
+
+#Favorites {
+    margin-top: 0; /* Remove any extra top margin */
+    padding-top: 0; /* Add slight padding if needed */
 }
 
 /* Section Heading */
@@ -810,7 +816,6 @@ audio {
 .about-projects {
     background: var(--primary);
     max-width: 1200px;
-    margin: 0 auto;
     padding: 50px 20px;
     text-align: center;
 }
@@ -1024,6 +1029,7 @@ audio {
     }
 }
 
+
 /* Section Alignment */
 
 .section {
@@ -1155,5 +1161,6 @@ audio {
 .switch .fa-moon{
     display: none;
 }
+
 
 
