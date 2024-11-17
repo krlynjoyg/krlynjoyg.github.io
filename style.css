@@ -164,18 +164,19 @@ ul li:hover a {
 }
 
 .sociallinks {
-    margin-top: 40px; /* Add top margin to push text below the navbar */
-    justify-content: center;
-    padding: 0 20px;
-    margin-left: 20px;
-    display: flex;
+    margin-top: 40px; /* Add spacing */
+    display: flex; /* Make it a flex container */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    gap: 15px; /* Add spacing between icons */
+    padding: 0;
 }
 
 .sociallinks i {
-    font-size: 3em;
-    margin-right: 10px;
+    font-size: 3em; /* Icon size */
     cursor: pointer;
     color: var(--secondary);
+    transition: all 0.3s ease; /* Smooth hover effect */
 }
 
 .sociallinks i:hover {
@@ -199,11 +200,15 @@ ul li:hover a {
 
 /* For medium screens (tablets) */
 @media screen and (max-width: 768px) {
+    .sociallinks {
+        margin-top: 20px; /* Reduce spacing */
+    }
+
     .sociallinks i {
-        font-size: 2.5em; /* Adjust icon size for tablets */
-        margin-right: 8px; /* Adjust spacing */
+        font-size: 2.5em; /* Adjust size for smaller devices */
     }
 }
+
 
 @media screen and (max-width: 668px) {
     .sociallinks i {
@@ -215,9 +220,12 @@ ul li:hover a {
 /* For small screens (mobile) */
 @media screen and (max-width: 480px) {
 
+    .sociallinks {
+        margin-top: 10px; /* Reduce spacing further */
+    }
+
     .sociallinks i {
-        font-size: 1.5em; /* Smaller icon size for mobile */
-        margin-right: 2px; /* Reduce margin */
+        font-size: 2em; /* Smaller icon size for mobile */
     }
 }
 
