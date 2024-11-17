@@ -723,7 +723,7 @@ ul li:hover a {
 
 #Favorites {
     margin-top: 0; /* Remove any extra top margin */
-    padding-top: 5px; /* Add slight padding if needed */
+    padding-top: 20px; /* Add slight padding if needed */
 }
 
 /* Section Heading */
@@ -813,6 +813,11 @@ audio {
     max-width: 1200px;
     padding: 50px 20px;
     text-align: center;
+}
+
+#School-Projects {
+    margin-top: 0; /* Remove any extra top margin */
+    padding-top: 20px; /* Add slight padding if needed */
 }
 
 /* Section Heading */
