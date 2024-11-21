@@ -31,10 +31,10 @@
         <div class="row">
             <div class="cols textdata">
                 <h2>Hi, I'm <span>Krislyn Joy</span></h2>
-                <h3>I.T Student</h3>
+                <h3>I.T. Student</h3>
                 <p>Studying at the University of the Immaculate Conception.</p>
                 <div class="btn">
-                    <a href="#About Me" class="projects-btn" id="About Me">Hire Me!</a>
+                    <a href="#Contact" class="projects-btn" id="About Me">Hire Me!</a>
                 </div>
                 <div class="sociallinks">
                     <a href="https://www.instagram.com/krlynjoyg/" target="_blank">
@@ -158,6 +158,15 @@
                         <a href="https://tinyurl.com/5hycj6nu" target="_blank" class="view-project">VIEW PROJECT</a>
                     </div>
                 </div>
+                <!-- Fifth Project -->
+                <div class="project-item">
+                    <img src="portfolio-5.png" alt="SIA Project" class="project-img">
+                    <div class="project-info">
+                        <span class="project-category">PATHGUIDE SYSTEM</span>
+                        <h3>UIC Guidance System</h3>
+                        <p>The PathGuide program aims to provide students at the University of the Immaculate Conception (UIC) with an accessible and user-friendly platform for consultations with the Guidance Office.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -196,6 +205,16 @@
                         <h3>PORTFOLIO ACTIVITY</h3>
                         <p>This activity showcases Olivia’s portfolio with responsive design elements and creative use of HTML.</p>
                         <a href="olivia_portfolio/index.html" target="_blank" class="view-project">VIEW ACTIVITY</a>
+                    </div>
+                </div>
+                <!-- Fourth Activity -->
+                <div class="html-item">
+                    <img src="codeacad.png" alt="Portfolio Project" class="html-img">
+                    <div class="html-info">
+                        <span class="html-category">WEB DEVELOPMENT</span>
+                        <h3>JS ACTIVITY</h3>
+                        <p>We learned JAVASCRIPT in this activity.</p>
+                        <a href="https://web.dev/" target="_blank" class="view-project">VIEW ACTIVITY</a>
                     </div>
                 </div>
             </div>
@@ -244,6 +263,53 @@
         </div>
     </div>
 
+    <div class="contact">
+    <div class="contact-me">
+        <div class="cont textdata">
+            <div class="booking-form hidden" id="Contact">
+                <h3>Contact Info</h3>
+                <p>Provide the information below</p>
+                <form>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">Name</label>
+                            <input type="text" id="firstName" name="firstName" aria-label="First Name" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="text" id="phone" name="phone" aria-label="Phone Number" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group email">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" aria-label="Email" required>
+                        </div>
+                        <div class="form-group date">
+                            <label for="date">Date</label>
+                            <input type="date" id="date" name="date" aria-label="Preferred Date" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="purpose">Message</label>
+                        <input type="text" id="purpose" name="purpose" aria-label="Purpose" required>
+                    </div>
+                    <button type="submit" class="submit-Btn">Submit</button>
+                </form>
+            </div>            
+        </div>
+    </div>
+</div>  
+
+<div class="Books">
+    <h3>Google Books</h3>
+    <input type="text" id="search-input" placeholder="Enter book title or keyword">
+    <div id="book-container"></div>
+    <button id="search-btn">Search</button>
+</div>
+
     <!--dark/light mode-->
     <script>
         const toggleSwitch = document.querySelector('.toggleSwitch');
@@ -261,7 +327,114 @@
     });
     </script>
 
-    
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+    const searchBtn = document.getElementById('search-btn');
+    const searchInput = document.getElementById('search-input');
+    const bookContainer = document.getElementById('book-container');
+
+    // Debugging: Log element references
+    console.log('Search Button:', searchBtn);
+    console.log('Search Input:', searchInput);
+    console.log('Book Container:', bookContainer);
+
+    // Ensure required elements are present in the DOM
+    if (!searchBtn || !searchInput || !bookContainer) {
+        console.error('One or more required elements are missing in the DOM.');
+        return;
+    }
+
+    // Event listener for search button
+    searchBtn.addEventListener('click', async () => {
+        const searchValue = searchInput.value.trim();
+
+        // Clear previous search results
+        bookContainer.innerHTML = '';
+
+        // Validate user input
+        if (!searchValue) {
+            bookContainer.innerHTML = '<p class="error-message">Please enter a keyword to search for books.</p>';
+            return;
+        }
+
+        // Disable the search button and change the text to show loading state
+        searchBtn.disabled = true;
+        searchBtn.innerHTML = 'Searching...';
+
+        try {
+            // Fetch data from the Google Books API
+            const response = await fetch(
+                `https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(searchValue)}&maxResults=10`
+            );
+
+            // Check response status
+            if (!response.ok) {
+                throw new Error(`Failed to fetch data from the API. Status: ${response.status}`);
+            }
+
+            const data = await response.json();
+
+            // Log the fetched data in the console
+            console.log('Fetched Books Data:', data);
+
+            // Check if books were found
+            if (data.items && data.items.length > 0) {
+                data.items.forEach((book) => {
+                    const info = book.volumeInfo;
+
+                    // Log individual book details in the console
+                    console.log('Book:', {
+                        title: info.title || 'No Title Available',
+                        authors: info.authors || ['Unknown'],
+                        description: info.description || 'No description available.',
+                        image: info.imageLinks?.thumbnail || 'No Image Available',
+                        infoLink: info.infoLink,
+                    });
+
+                    // Create a book element
+                    const bookElement = document.createElement('div');
+                    bookElement.className = 'book';
+
+                    // Populate the book element with data
+                    bookElement.innerHTML = `
+                        <h4>${info.title || 'No Title Available'}</h4>
+                        <p><strong>Author(s):</strong> ${info.authors ? info.authors.join(', ') : 'Unknown'}</p>
+                        <p>${info.description ? info.description.substring(0, 150) + '...' : 'No description available.'}</p>
+                        ${
+                            info.imageLinks
+                                ? `<img src="${info.imageLinks.thumbnail}" alt="Thumbnail for ${info.title}">`
+                                : ''
+                        }
+                        <a href="${info.infoLink}" target="_blank" class="more-info-link">More Info</a>
+                    `;
+
+                    // Append the book element to the container
+                    bookContainer.appendChild(bookElement);
+                });
+            } else {
+                bookContainer.innerHTML = '<p class="no-results-message">No books found for the given keyword. Please try again with a different search term.</p>';
+            }
+        } catch (error) {
+            console.error('Error fetching books:', error);
+            bookContainer.innerHTML = '<p class="error-message">Failed to fetch books. Please check your internet connection or try again later.</p>';
+        } finally {
+            // Re-enable the search button and reset text
+            searchBtn.disabled = false;
+            searchBtn.innerHTML = 'Search';
+        }
+    });
+});
+
+
+
+
+
+
+
+
+    </script>
+
+       <script src="script.js" ></script>
 </body>
 </html>
 
